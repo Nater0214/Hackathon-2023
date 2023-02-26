@@ -17,6 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
     QMainWindow, QSizePolicy, QWidget)
+from  . import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -574,24 +575,27 @@ class Ui_MainWindow(object):
         self.centralwidget.setEnabled(True)
         self.lineEdit = QLineEdit(self.centralwidget)
         self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(320, 270, 191, 31))
+        self.lineEdit.setGeometry(QRect(280, 270, 251, 31))
         self.lineEdit.setAutoFillBackground(False)
+        self.lineEdit.setStyleSheet(u"")
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(270, 10, 281, 101))
+        self.label_2.setGeometry(QRect(320, 20, 168, 83))
         self.lineEdit_2 = QLineEdit(self.centralwidget)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(320, 360, 381, 31))
+        self.lineEdit_2.setGeometry(QRect(280, 350, 391, 31))
         self.lineEdit_2.setAutoFillBackground(False)
+        self.lineEdit_2.setStyleSheet(u"")
         self.lineEdit_3 = QLineEdit(self.centralwidget)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(320, 310, 191, 31))
+        self.lineEdit_3.setGeometry(QRect(280, 310, 251, 31))
         self.lineEdit_3.setAutoFillBackground(False)
+        self.lineEdit_3.setStyleSheet(u"")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setPixmap(QPixmap(u"images/startimage.png"))
+        self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
         self.label.setScaledContents(True)
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
