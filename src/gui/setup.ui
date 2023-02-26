@@ -558,7 +558,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>images/startimage.png</pixmap>
+       <pixmap resource="resources.qrc">:/src/images/images/startimage.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -569,14 +569,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>280</x>
       <y>270</y>
-      <width>191</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>What time does your school end?</string>
@@ -585,10 +588,10 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>10</y>
-      <width>281</width>
-      <height>101</height>
+      <x>320</x>
+      <y>20</y>
+      <width>168</width>
+      <height>83</height>
      </rect>
     </property>
     <property name="whatsThis">
@@ -604,14 +607,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>360</y>
-      <width>381</width>
+      <x>280</x>
+      <y>350</y>
+      <width>391</width>
       <height>31</height>
      </rect>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>What time do your after school activities take place? To: ___ From: ___</string>
@@ -620,14 +626,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>280</x>
       <y>310</y>
-      <width>191</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>What time do you go to bed?</string>
@@ -635,6 +644,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
