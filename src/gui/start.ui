@@ -554,7 +554,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>images/startimage.png</pixmap>
+       <pixmap resource="recourses.qrc">:/images/images/startimage.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -571,6 +571,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="recourses.qrc"/>
+ </resources>
  <connections/>
 </ui>
