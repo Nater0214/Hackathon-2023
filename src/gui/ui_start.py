@@ -23,9 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(841, 606)
-        MainWindow.setMinimumSize(QSize(841, 606))
-        MainWindow.setMaximumSize(QSize(841, 606))
+        MainWindow.resize(823, 606)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
@@ -574,6 +572,11 @@ class Ui_MainWindow(object):
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        self.centralwidget.setSizePolicy(sizePolicy)
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(170, 100, 471, 211))
@@ -581,6 +584,7 @@ class Ui_MainWindow(object):
         self.label_3.setScaledContents(True)
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
         self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
@@ -592,6 +596,7 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setPixmap(QPixmap(u":/src/images/images/treetimepic.png"))
         self.label_2.setScaledContents(True)
+        self.label_2.setAlignment(Qt.AlignCenter)
 
         self.gridLayout.addWidget(self.label_2, 1, 1, 1, 1)
 
