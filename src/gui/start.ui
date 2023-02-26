@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Tree Time - Start</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/*
@@ -554,7 +554,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../../../Downloads/ss.png</pixmap>
+       <pixmap>images/startimage.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
