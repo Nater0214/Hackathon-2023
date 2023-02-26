@@ -635,8 +635,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>210</y>
+      <x>320</x>
+      <y>230</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -651,8 +651,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>260</y>
+      <x>330</x>
+      <y>280</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -667,9 +667,9 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>320</y>
-      <width>371</width>
+      <x>220</x>
+      <y>330</y>
+      <width>381</width>
       <height>31</height>
      </rect>
     </property>
@@ -680,11 +680,25 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string>What time do your after school activities take place? To: ___ From: ___</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>704</x>
+      <y>563</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Go to Tasks</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>lineEdit</zorder>
    <zorder>lineEdit_3</zorder>
    <zorder>lineEdit_2</zorder>
+   <zorder>pushButton</zorder>
   </widget>
  </widget>
  <resources>
