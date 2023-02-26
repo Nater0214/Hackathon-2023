@@ -601,6 +601,11 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
+        self.label.raise_()
+        self.lineEdit.raise_()
+        self.label_2.raise_()
+        self.lineEdit_2.raise_()
+        self.lineEdit_3.raise_()
 
         self.retranslateUi(MainWindow)
 
