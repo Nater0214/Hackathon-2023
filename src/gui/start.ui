@@ -549,7 +549,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1" colspan="2">
+    <item row="0" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
        <string/>
@@ -562,16 +562,37 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
       </property>
      </widget>
     </item>
-    <item row="1" column="1" colspan="2">
+    <item row="1" column="0">
      <widget class="QPushButton" name="setupButton">
       <property name="text">
-       <string>Welcome to Tree Time! Click Here to Start</string>
+       <string>Click Here to Start</string>
       </property>
      </widget>
     </item>
    </layout>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>60</y>
+      <width>671</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/src/images/images/treetimepic.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
