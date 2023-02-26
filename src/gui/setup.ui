@@ -642,6 +642,11 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string>What time do you go to bed?</string>
     </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>label_2</zorder>
+   <zorder>lineEdit_2</zorder>
+   <zorder>lineEdit_3</zorder>
   </widget>
  </widget>
  <resources>
