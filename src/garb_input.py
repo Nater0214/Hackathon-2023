@@ -50,8 +50,7 @@ def decipher(txt: str) -> dict:
             date = datetime.datetime.strptime(f"{month} {day} {datetime.date.today().year}", "%B %d %Y")
             date = datetime.date(date.year, date.month, date.day)
     
-    name = ' '.join(txt[:month_ind])
-    name = name.capitalize()
+    name = ' '.join([word.capitalize() for word in txt[:month_ind]])
     
     return {
         "name": name,
