@@ -642,33 +642,33 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'times new roman','times','serif'; font-size:72px; color:#ffffff;&quot;&gt;Task Input&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>170</y>
-      <width>371</width>
-      <height>291</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="taskinputEdit">
     <property name="geometry">
      <rect>
       <x>310</x>
       <y>550</y>
       <width>221</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Input Your Task Here and Due Date Here</string>
     </property>
    </widget>
+   <widget class="QListWidget" name="taskList">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>150</y>
+      <width>361</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
-   <zorder>listView</zorder>
    <zorder>taskinputEdit</zorder>
+   <zorder>taskList</zorder>
   </widget>
  </widget>
  <resources>
