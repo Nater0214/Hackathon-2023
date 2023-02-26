@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QListView,
-    QMainWindow, QPushButton, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
+    QListView, QMainWindow, QSizePolicy, QWidget)
 from  . import resources_rc
 
 class Ui_MainWindow(object):
@@ -24,6 +24,13 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 600)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setMinimumSize(QSize(800, 600))
+        MainWindow.setMaximumSize(QSize(800, 600))
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -572,9 +579,6 @@ class Ui_MainWindow(object):
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setMinimumSize(QSize(800, 600))
@@ -582,15 +586,14 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(250, 30, 305, 83))
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(130, 550, 561, 31))
         self.listView = QListView(self.centralwidget)
         self.listView.setObjectName(u"listView")
-        self.listView.setGeometry(QRect(230, 180, 361, 291))
+        self.listView.setGeometry(QRect(230, 170, 371, 291))
+        self.taskinputEdit = QLineEdit(self.centralwidget)
+        self.taskinputEdit.setObjectName(u"taskinputEdit")
+        self.taskinputEdit.setGeometry(QRect(310, 550, 221, 31))
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setVerticalSpacing(6)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
@@ -606,8 +609,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.label.raise_()
         self.label_2.raise_()
-        self.pushButton.raise_()
         self.listView.raise_()
+        self.taskinputEdit.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -617,7 +620,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-family:'times new roman','times','serif'; font-size:72px; color:#ffffff;\">Task Input</span></p></body></html>", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Input Your Task Here and Due Date Here", None))
+        self.taskinputEdit.setText(QCoreApplication.translate("MainWindow", u"Input Your Task Here and Due Date Here", None))
         self.label.setText("")
     # retranslateUi
 
