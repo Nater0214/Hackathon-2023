@@ -23,7 +23,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 606)
+        MainWindow.resize(841, 606)
+        MainWindow.setMinimumSize(QSize(841, 606))
+        MainWindow.setMaximumSize(QSize(841, 606))
+        MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -571,11 +574,11 @@ class Ui_MainWindow(object):
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.label_2 = QLabel(self.centralwidget)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(70, 60, 671, 291))
-        self.label_2.setPixmap(QPixmap(u":/src/images/images/treetimepic.png"))
-        self.label_2.setScaledContents(True)
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(170, 100, 471, 211))
+        self.label_3.setPixmap(QPixmap(u":/src/images/images/treetimepic.png"))
+        self.label_3.setScaledContents(True)
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.centralwidget)
@@ -583,12 +586,19 @@ class Ui_MainWindow(object):
         self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
         self.label.setScaledContents(True)
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label, 0, 0, 2, 2)
+
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setPixmap(QPixmap(u":/src/images/images/treetimepic.png"))
+        self.label_2.setScaledContents(True)
+
+        self.gridLayout.addWidget(self.label_2, 1, 1, 1, 1)
 
         self.setupButton = QPushButton(self.centralwidget)
         self.setupButton.setObjectName(u"setupButton")
 
-        self.gridLayout.addWidget(self.setupButton, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.setupButton, 2, 0, 1, 2)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -599,8 +609,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Start", None))
-        self.label_2.setText("")
+        self.label_3.setText("")
         self.label.setText("")
+        self.label_2.setText("")
         self.setupButton.setText(QCoreApplication.translate("MainWindow", u"Click Here to Start", None))
     # retranslateUi
 
