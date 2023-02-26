@@ -7,7 +7,7 @@ from PySide6 import QtCore as Qt
 from PySide6.QtGui import QStandardItem, QStandardItemModel
 from PySide6.QtWidgets import QApplication, QMainWindow
 
-from . import ui_start, ui_setup
+from . import ui_start, ui_setup, ui_input
 
 
 # Definitions
@@ -43,12 +43,32 @@ class SetupWindow(QMainWindow, ui_setup.Ui_MainWindow):
         
         super(SetupWindow, self).__init__()
         self.setupUi(self)
+        
+        # Button connections
+        self.gototaskButton.clicked.connect(self.input_window_start)
+    
+    
+    # Window changers
+    def input_window_start() -> None:
+        """Open the input UI"""
+        
+        input_window.show()
+
+
+class InputWindow(QMainWindow, ui_input.Ui_MainWindow):
+    def __init__(self):
+        # Init
+        
+        super(InputWindow, self).__init__()
+        self.setupUi(self)
 
 
 # Create the windows
 def create_windows(app: QApplication) -> None:
     global start_window
     global setup_window
+    global input_window
     
     start_window = StartWindow(app)
     setup_window = SetupWindow()
+    input_window = InputWindow()
