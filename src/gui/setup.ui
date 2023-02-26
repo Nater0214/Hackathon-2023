@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>605</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -126,7 +126,6 @@ QPushButton:disabled{
 	background-color: rgb(142,142,142);
 }
 QLineEdit {
-	text-align: center;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #4fa08b;
@@ -552,7 +551,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     <bool>true</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="0" column="0" rowspan="5" colspan="3">
      <widget class="QLabel" name="label">
       <property name="text">
        <string/>
@@ -565,93 +564,54 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
       </property>
      </widget>
     </item>
-   </layout>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>270</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>What time does your school end?</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>168</width>
-      <height>83</height>
-     </rect>
-    </property>
-    <property name="whatsThis">
-     <string>&lt;h1 style=&quot;text-align: center;&quot;&gt;
+    <item row="1" column="1" colspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="whatsThis">
+       <string>&lt;h1 style=&quot;text-align: center;&quot;&gt;
 	&lt;span style=&quot;font-size:48px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;Setup&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
 </string>
-    </property>
-    <property name="text">
-     <string>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:72px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;Setup&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+      </property>
+      <property name="text">
+       <string>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:72px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;Setup&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 </string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>350</y>
-      <width>391</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>What time do your after school activities take place? To: ___ From: ___</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>310</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>What time do you go to bed?</string>
-    </property>
-   </widget>
-   <zorder>label</zorder>
-   <zorder>lineEdit</zorder>
-   <zorder>label_2</zorder>
-   <zorder>lineEdit_2</zorder>
-   <zorder>lineEdit_3</zorder>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>What time does your school end?</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>What time do you go to bed?</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>What time do your after school activities take place? To: ___ From: ___</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../../../../.designer/backup/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
