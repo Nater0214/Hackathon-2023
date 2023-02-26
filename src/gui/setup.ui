@@ -632,6 +632,11 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string>What time do your after school activities take place? To: ___ From: ___</string>
     </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>lineEdit_3</zorder>
+   <zorder>lineEdit_2</zorder>
   </widget>
  </widget>
  <resources>
