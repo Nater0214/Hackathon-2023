@@ -571,6 +571,11 @@ class Ui_MainWindow(object):
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(70, 60, 671, 291))
+        self.label_2.setPixmap(QPixmap(u":/src/images/images/treetimepic.png"))
+        self.label_2.setScaledContents(True)
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.centralwidget)
@@ -578,12 +583,12 @@ class Ui_MainWindow(object):
         self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
         self.label.setScaledContents(True)
 
-        self.gridLayout.addWidget(self.label, 0, 1, 1, 2)
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
         self.setupButton = QPushButton(self.centralwidget)
         self.setupButton.setObjectName(u"setupButton")
 
-        self.gridLayout.addWidget(self.setupButton, 1, 1, 1, 2)
+        self.gridLayout.addWidget(self.setupButton, 1, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -594,7 +599,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Start", None))
+        self.label_2.setText("")
         self.label.setText("")
-        self.setupButton.setText(QCoreApplication.translate("MainWindow", u"Welcome to Tree Time! Click Here to Start", None))
+        self.setupButton.setText(QCoreApplication.translate("MainWindow", u"Click Here to Start", None))
     # retranslateUi
 
