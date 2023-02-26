@@ -15,17 +15,18 @@ def decipher(txt: str) -> dict:
     txt = txt.split(' ')
     
     # Find date
+    date = None
     
     # Look for a month
     for month in ("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"):
         try:
-            if (month_ind := txt.index(month)) >= 0:
+            if (date_ind := txt.index(month)) >= 0:
                 break
         except ValueError:
             pass
         
         try:
-            if (month_ind := txt.index(month[:3])) >= 0:
+            if (date_ind := txt.index(month[:3])) >= 0:
                 break
         except ValueError:
             pass
@@ -37,7 +38,7 @@ def decipher(txt: str) -> dict:
     if month:        
         for day in range(1, 32):
             try:
-                if (date_ind := txt.index(str(day), month_ind)):
+                if txt.index(str(day), date_ind):
                     break
             except ValueError:
                 continue
@@ -47,10 +48,43 @@ def decipher(txt: str) -> dict:
         
         
         if day:
-            date = datetime.datetime.strptime(f"{month} {day} {datetime.date.today().year}", "%B %d %Y")
-            date = datetime.date(date.year, date.month, date.day)
+            # Get date and day from string
+            date = datetime.datetime.strptime(f"{month} {day}", "%B %d")
+            
+            # Get the date closest to today
+            if abs((this_year_date := datetime.date(datetime.date.today().year, date.month, date.day)) - datetime.date.today()) < abs(((next_year_date := datetime.date(datetime.date.today().year + 1, date.month, date.day))) - datetime.date.today()):
+                if abs((last_year_date := datetime.date(datetime.date.today().year - 1, date.month, date.day)) - datetime.date.today()) < abs(this_year_date - datetime.date.today()):
+                    date = last_year_date
+                else:
+                    date = this_year_date
+            else:
+                date = next_year_date
     
-    name = ' '.join([word.capitalize() for word in txt[:month_ind]])
+    # Look for yesterday or today or tomorrow
+    else:
+        # Yesterday
+        try:
+            date_ind = txt.index("today")
+            date = datetime.date.today() - datetime.timedelta(days = 1)
+        except ValueError:
+            pass
+        
+        # Today
+        try:
+            date_ind = txt.index("today")
+            date = datetime.date.today()
+        except ValueError:
+            pass
+        
+        # Tomorrow
+        try:
+            date_ind = txt.index("tomorrow")
+            date = datetime.date.today() + datetime.timedelta(days = 1)
+        except ValueError:
+            pass
+    
+    # Get name
+    name = ' '.join([word.capitalize() for word in txt[:date_ind]])
     
     return {
         "name": name,

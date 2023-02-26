@@ -25,3 +25,15 @@ def test_vibhor_2():
         "name": "Submit Application",
         "date": datetime.date(2023, 2, 27)
     }
+
+def test_mine_2():
+    assert garb_input.decipher("old work dec 28") == {
+        "name": "Old Work",
+        "date": datetime.date(2022, 12, 28)
+    }
+
+def test_anish_2():
+    assert garb_input.decipher("cspan may 12") == {
+        "name": "Cspan",
+        "date": datetime.date(2023, 5, 12)
+    }
