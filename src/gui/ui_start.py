@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(800, 606)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -586,8 +586,6 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.setupButton, 1, 1, 1, 2)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        self.label.raise_()
-        self.setupButton.raise_()
 
         self.retranslateUi(MainWindow)
 
