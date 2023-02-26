@@ -572,6 +572,21 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setEnabled(True)
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(320, 40, 168, 83))
+        self.lineEdit = QLineEdit(self.centralwidget)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setGeometry(QRect(300, 210, 191, 31))
+        self.lineEdit.setAutoFillBackground(False)
+        self.lineEdit_3 = QLineEdit(self.centralwidget)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setGeometry(QRect(310, 260, 171, 31))
+        self.lineEdit_3.setAutoFillBackground(False)
+        self.lineEdit_2 = QLineEdit(self.centralwidget)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setGeometry(QRect(210, 320, 371, 31))
+        self.lineEdit_2.setAutoFillBackground(False)
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.centralwidget)
@@ -579,30 +594,7 @@ class Ui_MainWindow(object):
         self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
         self.label.setScaledContents(True)
 
-        self.gridLayout.addWidget(self.label, 0, 0, 5, 3)
-
-        self.label_2 = QLabel(self.centralwidget)
-        self.label_2.setObjectName(u"label_2")
-
-        self.gridLayout.addWidget(self.label_2, 1, 1, 1, 2)
-
-        self.lineEdit = QLineEdit(self.centralwidget)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setAutoFillBackground(False)
-
-        self.gridLayout.addWidget(self.lineEdit, 2, 2, 1, 1)
-
-        self.lineEdit_3 = QLineEdit(self.centralwidget)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setAutoFillBackground(False)
-
-        self.gridLayout.addWidget(self.lineEdit_3, 3, 2, 1, 1)
-
-        self.lineEdit_2 = QLineEdit(self.centralwidget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setAutoFillBackground(False)
-
-        self.gridLayout.addWidget(self.lineEdit_2, 4, 2, 1, 1)
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -613,7 +605,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Setup", None))
-        self.label.setText("")
 #if QT_CONFIG(whatsthis)
         self.label_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<h1 style=\"text-align: center;\">\n"
 "	<span style=\"font-size:48px;\"><span style=\"font-family:times new roman,times,serif;\">Setup</span></span></h1>\n"
@@ -624,5 +615,6 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"What time does your school end?", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"What time do you go to bed?", None))
         self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"What time do your after school activities take place? To: ___ From: ___", None))
+        self.label.setText("")
     # retranslateUi
 
