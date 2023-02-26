@@ -23,7 +23,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 606)
+        MainWindow.resize(841, 606)
+        MainWindow.setMinimumSize(QSize(841, 606))
+        MainWindow.setMaximumSize(QSize(841, 606))
+        MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
