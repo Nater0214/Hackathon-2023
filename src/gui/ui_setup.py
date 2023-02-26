@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'start.ui'
+## Form generated from reading UI file 'setup.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.0
 ##
@@ -15,15 +15,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QMainWindow,
-    QPushButton, QSizePolicy, QWidget)
-from  . import resources_rc
+from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
+    QSizePolicy, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 606)
+        MainWindow.resize(800, 600)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -571,20 +570,27 @@ class Ui_MainWindow(object):
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.gridLayout = QGridLayout(self.centralwidget)
-        self.gridLayout.setObjectName(u"gridLayout")
+        self.centralwidget.setEnabled(True)
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
+        self.label.setGeometry(QRect(0, 0, 801, 601))
+        self.label.setPixmap(QPixmap(u"images/startimage.png"))
         self.label.setScaledContents(True)
-
-        self.gridLayout.addWidget(self.label, 0, 1, 1, 2)
-
-        self.setupButton = QPushButton(self.centralwidget)
-        self.setupButton.setObjectName(u"setupButton")
-
-        self.gridLayout.addWidget(self.setupButton, 1, 1, 1, 2)
-
+        self.lineEdit = QLineEdit(self.centralwidget)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setGeometry(QRect(320, 270, 191, 31))
+        self.lineEdit.setAutoFillBackground(False)
+        self.lineEdit_3 = QLineEdit(self.centralwidget)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setGeometry(QRect(320, 310, 191, 31))
+        self.lineEdit_3.setAutoFillBackground(False)
+        self.lineEdit_2 = QLineEdit(self.centralwidget)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setGeometry(QRect(320, 360, 381, 31))
+        self.lineEdit_2.setAutoFillBackground(False)
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(270, 10, 281, 101))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -593,8 +599,17 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Start", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Setup", None))
         self.label.setText("")
-        self.setupButton.setText(QCoreApplication.translate("MainWindow", u"Welcome to Tree Time! Click Here to Start", None))
+        self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"What time does your school end?", None))
+        self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"What time do you go to bed?", None))
+        self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"What time do your after school activities take place? To: ___ From: ___", None))
+#if QT_CONFIG(whatsthis)
+        self.label_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<h1 style=\"text-align: center;\">\n"
+"	<span style=\"font-size:48px;\"><span style=\"font-family:times new roman,times,serif;\">Setup</span></span></h1>\n"
+"", None))
+#endif // QT_CONFIG(whatsthis)
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"<p style=\"text-align: center;\"><span style=\"font-size:72px;\"><span style=\"font-family:times new roman,times,serif;\">Setup</span></span></p>\n"
+"", None))
     # retranslateUi
 
