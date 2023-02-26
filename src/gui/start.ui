@@ -126,7 +126,6 @@ QPushButton:disabled{
 	background-color: rgb(142,142,142);
 }
 QLineEdit {
-	text-align: center;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #4fa08b;
@@ -555,7 +554,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>images/startimage.png</pixmap>
+       <pixmap resource="resources.qrc">:/src/images/images/startimage.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

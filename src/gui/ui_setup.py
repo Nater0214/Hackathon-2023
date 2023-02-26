@@ -18,13 +18,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
     QMainWindow, QSizePolicy, QWidget)
 from  . import resources_rc
-from  . import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 605)
+        MainWindow.resize(800, 600)
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -141,7 +140,6 @@ class Ui_MainWindow(object):
 "	background-color: rgb(142,142,142);\n"
 "}\n"
 "QLineEdit {\n"
-"	text-align: center;\n"
 "	border-width: 1px;\n"
 "	border-style: solid;\n"
 "	border-color: #4fa08b;\n"
@@ -177,8 +175,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMenuBar::item:selected {\n"
-""
-                        "  	background-color: #252a2e;\n"
+"  	background-color: #252"
+                        "a2e;\n"
 "	color: #FFFFFF;\n"
 "}\n"
 "QMenu {\n"
@@ -221,9 +219,9 @@ class Ui_MainWindow(object):
 "}\n"
 "QTabBar::tab:last {\n"
 "	border-style: solid;\n"
-"	b"
-                        "order-top-width:1px;\n"
-"	border-left-width:1px;\n"
+"	border-top-width:1px;\n"
+""
+                        "	border-left-width:1px;\n"
 "	border-right-width:1px;\n"
 "	border-bottom-width:0px;\n"
 "	border-color: #050a0e;\n"
@@ -260,8 +258,8 @@ class Ui_MainWindow(object):
 "	background-color: #1e282c;\n"
 "}\n"
 "\n"
-"QTabBar::tab:"
-                        "selected, QTabBar::tab:first:selected, QTabBar::tab:hover {\n"
+"QTabBar::tab:selected, QTabBar::tab:fi"
+                        "rst:selected, QTabBar::tab:hover {\n"
 "  	border-style: solid;\n"
 "  	border-left-width:1px;\n"
 "  	border-bottom-width:0px;\n"
@@ -303,8 +301,8 @@ class Ui_MainWindow(object):
 "	border-width: 1px;\n"
 "	border-color: #4fa08b;\n"
 "	color: #000000;\n"
-"	background-color: qradialgradient(cx:0.4, cy:0.4, radiu"
-                        "s: 1.5,fx:0, fy:0, stop:0 #1e282c, stop:0.3 #1e282c, stop:0.4 #4fa08b, stop:0.5 #1e282c, stop:1 #1e282c);\n"
+"	background-color: qradialgradient(cx:0.4, cy:0.4, radius: 1.5,fx:0, fy:0, stop:0"
+                        " #1e282c, stop:0.3 #1e282c, stop:0.4 #4fa08b, stop:0.5 #1e282c, stop:1 #1e282c);\n"
 "}\n"
 "QCheckBox::indicator:unchecked {\n"
 "\n"
@@ -344,9 +342,9 @@ class Ui_MainWindow(object):
 "}\n"
 "QSpinBox {\n"
 "	color: #d3dae3;\n"
-"	background-color: #222b"
-                        "2e;\n"
-"	border-width: 1px;\n"
+"	background-color: #222b2e;\n"
+"	border-width: 1p"
+                        "x;\n"
 "	border-style: solid;\n"
 "	border-color: #4fa08b;\n"
 "}\n"
@@ -393,9 +391,9 @@ class Ui_MainWindow(object):
 "	border-color: #4fa08b;\n"
 "}\n"
 "\n"
-""
-                        "QDial {\n"
-"	background: #16a085;\n"
+"QDial {\n"
+"	backgroun"
+                        "d: #16a085;\n"
 "}\n"
 "\n"
 "QToolBox {\n"
@@ -441,10 +439,10 @@ class Ui_MainWindow(object):
 "	border-radius: 7px;\n"
 "}\n"
 "QSlider::add-page:horizontal {\n"
-"    background: #525"
-                        "95d;\n"
+"    background: #52595d;\n"
 "}\n"
-"QSlider::add-page:vertical {\n"
+"QSlider"
+                        "::add-page:vertical {\n"
 "    background: #52595d;\n"
 "}\n"
 "QSlider::sub-page:horizontal {\n"
@@ -484,9 +482,9 @@ class Ui_MainWindow(object):
 "	min-height: 25px;\n"
 "}\n"
 "QScrollBar::handle:vertical:hover {\n"
-"	"
-                        "background: #58a492;\n"
-"	border-style: transparent;\n"
+"	background: #58a492;\n"
+""
+                        "	border-style: transparent;\n"
 "	border-radius: 4px;\n"
 "	min-height: 25px;\n"
 "}\n"
@@ -518,9 +516,9 @@ class Ui_MainWindow(object):
 "   subcontrol-origin: margin;\n"
 "}\n"
 "QScrollBar::add-line:vertical:pressed {\n"
-"   border: 2px transparent"
-                        " grey;\n"
-"   border-bottom-left-radius: 4px;\n"
+"   border: 2px transparent grey;\n"
+"   border-bott"
+                        "om-left-radius: 4px;\n"
 "   border-bottom-right-radius: 4px;\n"
 "   background: rgb(181,181,181);\n"
 "   height: 20px;\n"
@@ -552,10 +550,10 @@ class Ui_MainWindow(object):
 "   background: #15433a;\n"
 "   height: 20px;\n"
 "   subcontrol-position: top;\n"
-"   subcontro"
-                        "l-origin: margin;\n"
+"   subcontrol-origin: margin;\n"
 "}\n"
-"QScrollBar::sub-line:vertical:pressed {\n"
+""
+                        "QScrollBar::sub-line:vertical:pressed {\n"
 "   border: 2px transparent grey;\n"
 "   border-top-left-radius: 4px;\n"
 "   border-top-right-radius: 4px;\n"
@@ -574,24 +572,6 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setEnabled(True)
-        self.lineEdit = QLineEdit(self.centralwidget)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(280, 270, 251, 31))
-        self.lineEdit.setAutoFillBackground(False)
-        self.lineEdit.setStyleSheet(u"")
-        self.label_2 = QLabel(self.centralwidget)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(320, 20, 168, 83))
-        self.lineEdit_2 = QLineEdit(self.centralwidget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(280, 350, 391, 31))
-        self.lineEdit_2.setAutoFillBackground(False)
-        self.lineEdit_2.setStyleSheet(u"")
-        self.lineEdit_3 = QLineEdit(self.centralwidget)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(280, 310, 251, 31))
-        self.lineEdit_3.setAutoFillBackground(False)
-        self.lineEdit_3.setStyleSheet(u"")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.centralwidget)
@@ -599,14 +579,32 @@ class Ui_MainWindow(object):
         self.label.setPixmap(QPixmap(u":/src/images/images/startimage.png"))
         self.label.setScaledContents(True)
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label, 0, 0, 5, 3)
+
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout.addWidget(self.label_2, 1, 1, 1, 2)
+
+        self.lineEdit = QLineEdit(self.centralwidget)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setAutoFillBackground(False)
+
+        self.gridLayout.addWidget(self.lineEdit, 2, 2, 1, 1)
+
+        self.lineEdit_3 = QLineEdit(self.centralwidget)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setAutoFillBackground(False)
+
+        self.gridLayout.addWidget(self.lineEdit_3, 3, 2, 1, 1)
+
+        self.lineEdit_2 = QLineEdit(self.centralwidget)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setAutoFillBackground(False)
+
+        self.gridLayout.addWidget(self.lineEdit_2, 4, 2, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        self.label.raise_()
-        self.lineEdit.raise_()
-        self.label_2.raise_()
-        self.lineEdit_2.raise_()
-        self.lineEdit_3.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -615,7 +613,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tree Time - Setup", None))
-        self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"What time does your school end?", None))
+        self.label.setText("")
 #if QT_CONFIG(whatsthis)
         self.label_2.setWhatsThis(QCoreApplication.translate("MainWindow", u"<h1 style=\"text-align: center;\">\n"
 "	<span style=\"font-size:48px;\"><span style=\"font-family:times new roman,times,serif;\">Setup</span></span></h1>\n"
@@ -623,8 +621,8 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(whatsthis)
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<p style=\"text-align: center;\"><span style=\"font-size:72px;\"><span style=\"font-family:times new roman,times,serif;\">Setup</span></span></p>\n"
 "", None))
-        self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"What time do your after school activities take place? To: ___ From: ___", None))
+        self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"What time does your school end?", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"What time do you go to bed?", None))
-        self.label.setText("")
+        self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"What time do your after school activities take place? To: ___ From: ___", None))
     # retranslateUi
 
