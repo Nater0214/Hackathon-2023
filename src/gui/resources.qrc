@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="src/images">
     <file>images/startimage.png</file>
+    <file>images/treetime.png</file>
   </qresource>
 </RCC>
