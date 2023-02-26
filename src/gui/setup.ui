@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -126,6 +126,7 @@ QPushButton:disabled{
 	background-color: rgb(142,142,142);
 }
 QLineEdit {
+	text-align: center;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #4fa08b;
@@ -550,25 +551,21 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>801</width>
-      <height>601</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>images/startimage.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>images/startimage.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
@@ -583,38 +580,6 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     </property>
     <property name="text">
      <string>What time does your school end?</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>310</y>
-      <width>191</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>What time do you go to bed?</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>360</y>
-      <width>381</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>What time do your after school activities take place? To: ___ From: ___</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -634,6 +599,38 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     <property name="text">
      <string>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size:72px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;Setup&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>360</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>What time do your after school activities take place? To: ___ From: ___</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>310</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>What time do you go to bed?</string>
     </property>
    </widget>
   </widget>

@@ -110,6 +110,7 @@ QPushButton:disabled{
 	background-color: rgb(142,142,142);
 }
 QLineEdit {
+	text-align: center;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #4fa08b;

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>606</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -126,6 +126,7 @@ QPushButton:disabled{
 	background-color: rgb(142,142,142);
 }
 QLineEdit {
+	text-align: center;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #4fa08b;
@@ -554,7 +555,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/src/images/images/startimage.png</pixmap>
+       <pixmap>images/startimage.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -569,10 +570,11 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      </widget>
     </item>
    </layout>
+   <zorder>label</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>setupButton</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
