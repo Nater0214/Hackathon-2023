@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
-    QMainWindow, QSizePolicy, QWidget)
+    QMainWindow, QPushButton, QSizePolicy, QWidget)
 from  . import resources_rc
 
 class Ui_MainWindow(object):
@@ -24,6 +24,13 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 600)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setMinimumSize(QSize(800, 600))
+        MainWindow.setMaximumSize(QSize(800, 600))
         MainWindow.setStyleSheet(u"/*\n"
 "ManjaroMix Style Sheet for QT Applications\n"
 "Author: Jaime A. Quiroga P.\n"
@@ -572,9 +579,6 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setEnabled(True)
-        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setMinimumSize(QSize(800, 600))
@@ -584,16 +588,19 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QRect(320, 40, 168, 83))
         self.lineEdit = QLineEdit(self.centralwidget)
         self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setGeometry(QRect(300, 210, 191, 31))
+        self.lineEdit.setGeometry(QRect(320, 230, 191, 31))
         self.lineEdit.setAutoFillBackground(False)
         self.lineEdit_3 = QLineEdit(self.centralwidget)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(310, 260, 171, 31))
+        self.lineEdit_3.setGeometry(QRect(330, 280, 171, 31))
         self.lineEdit_3.setAutoFillBackground(False)
         self.lineEdit_2 = QLineEdit(self.centralwidget)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(210, 320, 371, 31))
+        self.lineEdit_2.setGeometry(QRect(220, 330, 381, 31))
         self.lineEdit_2.setAutoFillBackground(False)
+        self.gototaskButton = QPushButton(self.centralwidget)
+        self.gototaskButton.setObjectName(u"gototaskButton")
+        self.gototaskButton.setGeometry(QRect(704, 563, 91, 31))
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -610,6 +617,7 @@ class Ui_MainWindow(object):
         self.lineEdit.raise_()
         self.lineEdit_3.raise_()
         self.lineEdit_2.raise_()
+        self.gototaskButton.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -628,6 +636,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"What time does your school end?", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"What time do you go to bed?", None))
         self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"What time do your after school activities take place? To: ___ From: ___", None))
+        self.gototaskButton.setText(QCoreApplication.translate("MainWindow", u"Go to Tasks", None))
         self.label.setText("")
     # retranslateUi
 
