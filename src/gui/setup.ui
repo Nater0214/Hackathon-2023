@@ -680,7 +680,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <string>What time do your after school activities take place? To: ___ From: ___</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="gototaskButton">
     <property name="geometry">
      <rect>
       <x>704</x>
@@ -698,7 +698,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
    <zorder>lineEdit</zorder>
    <zorder>lineEdit_3</zorder>
    <zorder>lineEdit_2</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>gototaskButton</zorder>
   </widget>
  </widget>
  <resources>
