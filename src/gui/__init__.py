@@ -8,6 +8,7 @@ from PySide6.QtGui import QStandardItem, QStandardItemModel
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 from . import ui_start, ui_setup, ui_input
+import src.garb_input as garb_input
 
 
 # Definitions
@@ -49,7 +50,7 @@ class SetupWindow(QMainWindow, ui_setup.Ui_MainWindow):
     
     
     # Window changers
-    def input_window_start() -> None:
+    def input_window_start(self) -> None:
         """Open the input UI"""
         
         input_window.show()
@@ -61,6 +62,22 @@ class InputWindow(QMainWindow, ui_input.Ui_MainWindow):
         
         super(InputWindow, self).__init__()
         self.setupUi(self)
+        
+        # Input connections
+        self.taskinputEdit.returnPressed.connect(self.add_task)
+    
+    
+    def add_task(self):
+        """Add the input task"""
+        
+        # Get text and clear
+        task_text = self.taskinputEdit.text()
+        self.taskinputEdit.clear()
+        
+        # Run decipher on text
+        deciphered_text = garb_input.decipher(task_text)
+        
+        self.taskList.addItem(f"{deciphered_text['date']}: {deciphered_text['name']}")
 
 
 # Create the windows

@@ -16,7 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
-    QListView, QMainWindow, QSizePolicy, QWidget)
+    QListWidget, QListWidgetItem, QMainWindow, QSizePolicy,
+    QWidget)
 from  . import resources_rc
 
 class Ui_MainWindow(object):
@@ -586,12 +587,12 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(250, 30, 305, 83))
-        self.listView = QListView(self.centralwidget)
-        self.listView.setObjectName(u"listView")
-        self.listView.setGeometry(QRect(230, 170, 371, 291))
         self.taskinputEdit = QLineEdit(self.centralwidget)
         self.taskinputEdit.setObjectName(u"taskinputEdit")
-        self.taskinputEdit.setGeometry(QRect(310, 550, 221, 31))
+        self.taskinputEdit.setGeometry(QRect(310, 550, 221, 21))
+        self.taskList = QListWidget(self.centralwidget)
+        self.taskList.setObjectName(u"taskList")
+        self.taskList.setGeometry(QRect(230, 150, 361, 291))
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -609,8 +610,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.label.raise_()
         self.label_2.raise_()
-        self.listView.raise_()
         self.taskinputEdit.raise_()
+        self.taskList.raise_()
 
         self.retranslateUi(MainWindow)
 
