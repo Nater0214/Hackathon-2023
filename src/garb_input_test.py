@@ -23,7 +23,7 @@ def test_anish_1():
 def test_vibhor_2():
     assert garb_input.decipher("submit application tomorrow") == {
         "name": "Submit Application",
-        "date": datetime.date(2023, 2, 27)
+        "date": datetime.date.today() + datetime.timedelta(days=1)
     }
 
 def test_mine_2():
